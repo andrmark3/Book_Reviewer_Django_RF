@@ -41,8 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
+
+    # -------------------------------
+    # 3rd party libraries.
     'django_filters',
+    'rest_framework',
+
     # -------------------------------
     # User Defined Applications.
     'apps.book_reviews',
@@ -57,7 +61,7 @@ REST_FRAMEWORK = {
     """
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     'DEFAULT_PERMISSION_CLASSES': [
-    #     'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    #     'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
     
     ]
 }

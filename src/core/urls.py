@@ -22,8 +22,7 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 urlpatterns = [
-    path('api/', include(router.urls)),
-    path('api/books/', include('apps.book_reviews.urls'), name='books'),
+    path('api/', include('apps.book_reviews.urls'), name='books'),
     path('api-auth/', include('rest_framework.urls')),
     path('admin/', admin.site.urls),  # Overrides index with admin page redirect
 ]
