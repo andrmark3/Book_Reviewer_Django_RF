@@ -1,0 +1,4 @@
+
+This "other_app_folder" there is only for the purpose of showing the current structure of "apps" parent folder.
+
+Current "apps" folder will contain all the reusable application folders for any future migration to any future projects.

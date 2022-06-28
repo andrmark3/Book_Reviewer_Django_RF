@@ -1,0 +1,4 @@
+db/data for saving all data from database locally, needs to be uncomment out in docker-compose.yml > db > volumes.
+
+db/init for running some SQL queries inside containized database from docker-entrypoint-initdb,
+needs to be uncomment out in docker-compose.yml > db > volumes.

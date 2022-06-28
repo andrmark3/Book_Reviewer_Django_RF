@@ -28,15 +28,3 @@ password : pass
 ```
 
 
-## Build the package
-
-```bash
-# Install package locally
-python3 setup.py install 
-# Run the app
-TRIPP
-
-# Build the distribution
-python3 -m build --sdist
-```
-

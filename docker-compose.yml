@@ -1,0 +1,40 @@
+version: "3.8"
+
+networks:
+  app_network:
+    driver: bridge
+    name: app_network
+
+services:
+
+  db:
+    container_name: app-db
+    image: mysql:5.7.37
+    restart: on-failure
+    networks:
+      - app_network
+    ports:
+      - "3306:3306"
+    env_file:
+      - .env
+    # volumes:
+      # - ./docker/db/init:/docker-entrypoint-initdb.d/:ro  # //  Executes the entrypoint script to initialize the database in docker container.
+      # - ./docker/db/data:/var/lib/mysql                   # //  Enable this if you want to save locally database files.
+
+  
+  backend:
+    container_name: app-backend
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile
+    networks:
+      - app_network
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/src
+    env_file:
+      - .env
+
