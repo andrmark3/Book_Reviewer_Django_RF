@@ -2,8 +2,7 @@
 
 ## Getting started locally
 
-### 
-The backend of the Book Reviewer project uses django (python) and MySQL
+### The backend of the Book Reviewer project uses django (python) and MySQL
 
 ```bash
 docker-compose -f docker-compose.yml up
