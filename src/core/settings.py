@@ -100,20 +100,25 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
-    'default': {
-        'ENGINE': os.getenv('DB_DEFAULT_ENGINE', 'django.db.backends.mysql'),
-        'NAME': os.getenv('DB_DEFAULT_NAME', 'database'),
-        'USER': os.getenv('DB_DEFAULT_USER', 'root'),
-        'PASSWORD': os.getenv('DB_DEFAULT_PASSWORD', 'root'),
-        'HOST': os.getenv('DB_DEFAULT_HOST', 'localhost'),
-        'PORT': os.getenv('DB_DEFAULT_PORT', '3306'),
+ENV = os.getenv('ENVIRONMENT')
+if ENV == 'DOCKER':
+    DATABASES = {
+        'default': {
+            'ENGINE': os.getenv('DB_DEFAULT_ENGINE', 'django.db.backends.mysql'),
+            'NAME': os.getenv('DB_DEFAULT_NAME', 'database'),
+            'USER': os.getenv('DB_DEFAULT_USER', 'root'),
+            'PASSWORD': os.getenv('DB_DEFAULT_PASSWORD', 'root'),
+            'HOST': os.getenv('DB_DEFAULT_HOST', 'localhost'),
+            'PORT': os.getenv('DB_DEFAULT_PORT', '3306'),
+        },
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation
