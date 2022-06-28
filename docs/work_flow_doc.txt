@@ -20,4 +20,6 @@ Created documentation for the app.
 
 Splitted the 2 Environments for local and docker to be different and work properly.
 
-Created new GitHub repo so i can push the project.
+Tested both setups locally or docker works fine.
+
+Created new GitHub repo and pushed project.
