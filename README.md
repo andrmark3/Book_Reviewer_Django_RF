@@ -23,8 +23,13 @@ You can connect to the application by the default created user.
 username : morotech
 password : pass 
 ```
+### Backend main URL:
 
-Backend application in your browser at [http://localhost:8000/](http://localhost:8000/).
+Backend application in your browser at: 
+```bash
+    [http://localhost:8000/](http://localhost:8000/).
+```
+### Endpoint examples:
 
 ```bash
 - " api/book/external/ "       # // Part 1 // Searching functionallity from url kwargs.
@@ -34,9 +39,12 @@ Backend application in your browser at [http://localhost:8000/](http://localhost
 - " api/book/book/15 "         # // Part 3 //   
 ```
 
-Admin panel in your browser at [http://localhost:8000/admin/](http://localhost:8000/admin/).
+### Admin panel URL:
+Admin panel in your browser at 
 
-
+```bash
+    [http://localhost:8000/admin/](http://localhost:8000/admin/).
+```
 
 ## Database Credentials
 
