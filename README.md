@@ -30,11 +30,11 @@ Backend application in your browser at: [http://localhost:8000/](http://localhos
 ### Endpoint examples:
 
 ```bash
-- api/book/external/        # // Part 1 // Searching functionallity from url kwargs.
-- api/book/external/Great   # // Part 1 // Searching functionallity from searching param.
-- api/book/external/2       # // Part 1 // Pagination
-- api/book/review/11        # // Part 2 //                                 
-- api/book/book/15          # // Part 3 //   
+- api/book/external/Great           # // Part 1 // Searching functionallity from url kwargs.
+- api/book/external/?search=Great   # // Part 1 // Searching functionallity from searching param.
+- api/book/external/2               # // Part 1 // Pagination
+- api/book/review/11                # // Part 2 //                                 
+- api/book/book/15                  # // Part 3 //   
 ```
 
 ### Admin panel URL:

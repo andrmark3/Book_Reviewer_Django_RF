@@ -1,0 +1,23 @@
+Writting all the tasks in a paper for clear view on that part.
+
+Planning of the structure of the database in a paper.
+
+Create a django project locally.
+
+Created the mixins Abstract models for general use in multiple models.
+
+Create the models of the database.
+
+Configuring the admin panel models and the return objects.  
+
+Search about the right pick of View classes to handle this custom api call to Gutendex.
+
+Working on any part of a time creating Urls, Views And Serializers.
+
+Cleaned and optimized the code as its possible.
+
+Created documentation for the app.
+
+Splitted the 2 Environments for local and docker to be different and work properly.
+
+Created new GitHub repo so i can push the project.
