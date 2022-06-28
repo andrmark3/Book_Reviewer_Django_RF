@@ -30,11 +30,20 @@ Backend application in your browser at: [http://localhost:8000/](http://localhos
 ### Endpoint examples:
 
 ```bash
-- api/book/external/Great           # // Part 1 // Searching functionallity from url kwargs.
-- api/book/external/?search=Great   # // Part 1 // Searching functionallity from searching param.
-- api/book/external/2               # // Part 1 // Pagination
-- api/book/review/11                # // Part 2 //                                 
-- api/book/book/15                  # // Part 3 //   
+    # // Part 1 // Searching functionallity from url kwargs.  
+    - external/
+    # // Part 1 // Searching functionallity from searching param.                                    
+    - external/<str:search>/
+    # // Part 1 // + Pagination                       
+    - external/<int:page>/
+    # // Part 2 //                         
+    - review/<int:book_id>/
+    # // Part 3 //                                               
+    - book/<int:book_id>/   
+    # // Bonus average service getting the average scores by book_id and year.                                 
+    - average_month/<int:book_id>/  or  /<int:book_id>/<int:year>/                
+    # // Bonus top books service getting the top N rated book by top_num from url.                                             
+    -  top_books/<int:top_num>/  
 ```
 
 ### Admin panel URL:
