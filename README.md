@@ -30,20 +30,20 @@ Backend application in your browser at: [http://localhost:8000/](http://localhos
 ### Endpoint examples:
 
 ```bash
-# Part 1 // Searching functionallity from url kwargs.  
-- external/
-# Part 1 // Searching functionallity from searching param.                                    
+# Part 1  Get all Gutendex books or Searching functionallity with searching param.
+- external/  or  external/?serach=example
+# Part 1  Searching functionallity from url kwargs                             
 - external/<str:search>/
-# Part 1 // + Pagination                       
+# Part 1  + Pagination                       
 - external/<int:page>/
-# Part 2 //                         
+# Part 2                         
 - review/<int:book_id>/
-# Part 3 //                                               
+# Part 3                                                
 - book/<int:book_id>/   
-# Bonus average service getting the average scores by book_id and year.                                 
+# Bonus average service, getting the average scores by book_id and year.                                 
 - average_month/<int:book_id>/  or  /<int:book_id>/<int:year>/                
-# Bonus top books service getting the top N rated book by top_num from url.                                             
--  top_books/<int:top_num>/  
+# Bonus top books service, getting the top rated N books sorted by top_num from url.                                             
+- top_books/<int:top_num>/  
 ```
 
 ### Admin panel URL:
